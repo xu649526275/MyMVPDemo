@@ -21,18 +21,18 @@
 	：配合Rxjava处理控件异步调用
 - [EventBus](https://github.com/greenrobot/EventBus)
 	：订阅事件总线	
- - [retrofit](https://github.com/square/retrofit)
+- [retrofit](https://github.com/square/retrofit)
 	：目前最好用的网络通讯库，应该都用过吧
 - [okhttp](https://github.com/square/okhttp)
 	：okhttp和retrofit做网络通讯是绝配
- - [glide](https://github.com/bumptech/glide)
+- [glide](https://github.com/bumptech/glide)
 	：Google出品的图片加载库，这里有非常好的指导文档：https://mrfu.me/2016/02/27/Glide_Getting_Started/
   
-  - [PhotoView](https://github.com/chrisbanes/PhotoView)
+- [PhotoView](https://github.com/chrisbanes/PhotoView)
 	：可根据手势进行缩放的图像库，这个也很常见
-  - [gson](https://github.com/google/gson)
+- [gson](https://github.com/google/gson)
 	：帮助Json和Object转换，这个也常用
-  - [android-Ultra-Pull-To-Refresh](https://github.com/liaohuqiu/android-Ultra-Pull-To-Refresh)
+- [android-Ultra-Pull-To-Refresh](https://github.com/liaohuqiu/android-Ultra-Pull-To-Refresh)
   :非常强大的下拉刷新
   
   
