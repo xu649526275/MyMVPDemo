@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="220px"
+                  android:id="@+id/myLine"
+                  android:orientation="horizontal"
+        >
+        <LinearLayout android:layout_width="0dp"
+                      android:layout_weight="1"
+                      android:layout_height="match_parent"
+                      android:orientation="vertical"
+                      android:paddingLeft="@dimen/padding_size15"
+                      android:paddingTop="@dimen/padding_size15"
+                      android:paddingBottom="@dimen/padding_size15"
+            >
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:maxLines="2"
+                      android:ellipsize="end"
+                      android:text="今天开炮，立贴打卡！"
+                      android:id="@+id/item_home_post_title"
+                      android:textSize="@dimen/foot_text_size"
+                      android:textColor="@color/black_text_color"
+                />
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="42px"
+                      android:gravity="center"
+                      android:background="@drawable/borad_label_bg"
+                      android:paddingLeft="20px"
+                      android:paddingRight="20px"
+                      android:text="热身健跑"
+                      android:layout_marginTop="10dp"
+                      android:id="@+id/item_home_post_btn"
+                      android:textSize="22px"
+                      android:textColor="@color/button_color"
+                />
+
+
+
+        </LinearLayout>
+
+        <ImageView android:layout_width="160px"
+                   android:layout_height="160px"
+                   android:src="@mipmap/home_board_default"
+                   android:scaleType="centerCrop"
+                   android:id="@+id/item_home_post_img"
+                   android:layout_margin="@dimen/padding_size15"
+            />
+
+
+    </LinearLayout>
+    <View android:layout_width="match_parent"
+          android:layout_height="1px"
+          android:background="@color/content_color"
+        />
+</LinearLayout>

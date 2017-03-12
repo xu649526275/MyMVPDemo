@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:padding="@dimen/padding_size20"
+              android:gravity="center"
+              android:id="@+id/myLine"
+    >
+
+
+
+    <ImageView android:layout_width="100px"
+               android:layout_height="100px"
+               android:id="@+id/item_home_barand_img"
+        />
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="好油"
+              android:layout_marginTop="@dimen/padding_size5"
+              android:textSize="@dimen/foot_text_size"
+              android:id="@+id/item_home_barand_title"
+              android:textColor="@color/black_text_color"/>
+</LinearLayout>

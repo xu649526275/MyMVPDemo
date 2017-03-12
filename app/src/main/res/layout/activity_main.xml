@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+     android:clipToPadding="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <android.support.v4.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/my_drawer"
+        >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:id="@+id/toolbar_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <include layout="@layout/toolbar"
+                 android:id="@+id/mytoolbar"
+
+            />
+        <com.miguelcatalan.materialsearchview.MaterialSearchView
+            android:id="@+id/view_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        </FrameLayout>
+
+        <FrameLayout android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:id="@+id/my_fragment"
+            />
+
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        app:headerLayout="@layout/view_drawer_header"
+        android:id="@+id/navigation"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        app:menu="@menu/drawer_menu"
+        app:itemBackground="@drawable/drawer_item_bg"
+        />
+
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>

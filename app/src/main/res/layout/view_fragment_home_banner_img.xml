@@ -1,0 +1,25 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="300px"
+    android:id="@+id/home_viewpage_frame"
+     >
+
+    <ImageView
+        android:id="@+id/product_info_img"
+        android:layout_width="match_parent"
+        android:layout_height="500px"
+        android:scaleType="fitXY"
+        android:src="@mipmap/home_viewpage_default"
+         >
+    </ImageView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="70px"
+        android:src="@mipmap/home_viewpage_bottom_bg"
+        android:scaleType="centerCrop"
+        android:layout_gravity="bottom"
+        />
+
+</FrameLayout>

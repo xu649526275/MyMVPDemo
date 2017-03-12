@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_color"
+    android:orientation="vertical">
+
+
+
+
+
+    <com.android.dalong.MyRefLayout
+        android:id="@+id/load_more_list_view_ptr_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.android.dalong.MyRecyclerView
+            android:id="@+id/home_special_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.android.dalong.MyRefLayout>
+
+</LinearLayout>

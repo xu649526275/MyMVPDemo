@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:card="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/myLine"
+    >
+
+
+    <com.android.mvp.widget.view.MyCardView android:layout_width="match_parent"
+        android:layout_height="380px"
+        android:layout_margin="@dimen/padding_size5"
+        card:cardCornerRadius="@dimen/padding_size5"
+        card:cardElevation="2dp"
+        >
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView android:layout_width="match_parent"
+                       android:layout_height="302px"
+                       android:id="@+id/item_home_special_img"
+                       android:scaleType="fitXY"
+                       android:src="@mipmap/home_special_default"
+                />
+            <TextView android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="#赶走炎热，清凉一夏!"
+                      android:singleLine="true"
+                      android:id="@+id/item_home_special_title"
+                      android:textSize="@dimen/foot_text_size"
+                      android:paddingLeft="@dimen/padding_size10"
+                      android:gravity="center_vertical"
+                      android:textColor="@color/gray_text_color"
+                />
+
+        </LinearLayout>
+
+    </com.android.mvp.widget.view.MyCardView>
+
+</LinearLayout>

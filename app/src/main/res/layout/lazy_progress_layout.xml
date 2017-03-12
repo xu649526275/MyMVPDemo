@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:visibility="gone"
+    >
+    <LinearLayout
+        android:layout_width="200px"
+        android:layout_height="200px"
+        android:background="@drawable/loading_bg"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        <com.android.mvp.widget.view.ProgressWheel
+            android:id="@+id/progress_wheel_f"
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:layout_centerHorizontal="true"
+            app:matProg_barColor="@color/colorAccent"
+            app:matProg_progressIndeterminate="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="60px"
+            android:gravity="center"
+            android:text="@string/loading_title"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            android:layout_marginTop="25px"
+            />
+    </LinearLayout>
+</LinearLayout>

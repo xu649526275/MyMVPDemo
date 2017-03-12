@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="80px"
+    android:gravity="center"
+    android:layout_margin="@dimen/padding_size10"
+    android:background="@color/content_color"
+    android:textColor="@color/title_text_color"
+    android:textSize="@dimen/foot_text_size"
+    android:text="艾弗森"
+    android:id="@+id/item_tab_text"
+    >
+
+</TextView>

@@ -1,0 +1,1 @@
+include ':app', ':Photo_View', ':Lib_Myrecyclerview'

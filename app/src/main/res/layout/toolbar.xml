@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.mvp.widget.view.MyToolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title_left_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="编辑"
+            android:textColor="@color/white"
+            android:textSize="34px"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/title_content_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/title_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="500px"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="42px" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/title_right_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/title_right_img"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:layout_gravity="center_vertical"
+            android:padding="30px"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/title_right_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:paddingLeft="30px"
+            android:paddingRight="30px"
+            android:text="标题"
+            android:textColor="@color/white"
+            android:textSize="34px"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/toolbar_message_view"
+        android:layout_width="120px"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:visibility="gone"
+        android:padding="24px">
+
+        <ImageView
+            android:layout_width="48px"
+            android:layout_height="48px"
+            android:layout_centerInParent="true"
+            />
+
+        <ImageView
+            android:id="@+id/toolbar_message_unread_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="6px"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+
+</com.android.mvp.widget.view.MyToolbar>

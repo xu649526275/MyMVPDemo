@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    >
+
+    <include layout="@layout/toolbar" android:id="@+id/my_toolbar"/>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_size10"
+        >
+
+        <TextView android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:gravity="center"
+            android:textColor="@color/title_text_color"
+            android:id="@+id/my_text"
+            android:text="点击可增删/长按并拖拽可排序"
+            android:textSize="@dimen/foot_text_size"
+            />
+
+
+        <TextView android:layout_width="match_parent"
+            android:layout_height="60px"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_black"
+            android:text="我的频道"
+            android:textSize="@dimen/foot_text_size"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/my_tabs"
+            android:overScrollMode="never"
+            />
+
+        <TextView android:layout_width="match_parent"
+            android:layout_height="60px"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_black"
+            android:text="更多频道"
+            android:textSize="@dimen/foot_text_size"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/more_tabs"
+            android:overScrollMode="never"
+            />
+    </LinearLayout>
+</LinearLayout>

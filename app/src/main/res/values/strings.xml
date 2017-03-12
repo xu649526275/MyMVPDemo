@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">项目Demo</string>
+    <string name="loading_title">努力加载中</string>
+
+
+    //main drawer
+    <string name="dp">点屏首页</string>
+    <string name="zhihu">知乎日报</string>
+    <string name="wechat">微信精选</string>
+    <string name="news">网易新闻</string>
+    <string name="video">视频</string>
+    <string name="gank">干货集中营</string>
+    <string name="drawer_about">关于</string>
+    <string name="drawer_collection">收藏</string>
+    <string name="drawer_setting">设置</string>
+    <string name="drawer_open">打开</string>
+    <string name="drawer_close">关闭</string>
+    <string name="drawer_group_content">资讯</string>
+    <string name="drawer_group_options">选项</string>
+
+    <string name="news_from">%1$s %2$s</string>
+    <!-- 首页 -->
+    <string name="home_posts">社区热帖</string>
+    <string name="home_classify">食安定制食品分类</string>
+    <string name="home_topics">精选专题</string>
+
+    <!-- 共享过度动画 -->
+    <string name="transition_photos">transition_animation_news_photos</string>
+</resources>

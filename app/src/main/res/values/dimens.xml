@@ -1,0 +1,46 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="home_viewpage_imgpadding_size">10px</dimen>
+    <dimen name="padding_size10">20px</dimen>
+    <dimen name="padding_size20">40px</dimen>
+    <dimen name="padding_size15">30px</dimen>
+    <dimen name="padding_size5">10px</dimen>
+    <dimen name="foot_text_size">34px</dimen>
+    <dimen name="foot_text_size_dp">16dp</dimen>
+    <dimen name="product_text_size">36px</dimen>
+    <dimen name="foot_big_text_size">20dip</dimen>
+    <dimen name="small_text_size">30px</dimen>
+    <dimen name="small_text_size_dp">16dp</dimen>
+
+    <dimen name="min_small_text_size">28px</dimen>
+
+    <dimen name="side_letter_bar_letter_size">12sp</dimen>
+    <dimen name="side_letter_bar_width">30dp</dimen>
+    <dimen name="city_text_size">16sp</dimen>
+
+
+    <dimen name="padding_size">20px</dimen>
+    <dimen name="foot_drawable_padding">10px</dimen>
+    <dimen name="line_height">1dip</dimen>
+     <!--确认订单-->
+    <dimen name="input_hint_size">36px</dimen>
+    <dimen name="input_hint_size_dp">18dp</dimen>
+    <dimen name="input_padding_size">40px</dimen>
+    <dimen name="input_padding_size_42px">42px</dimen>
+    <dimen name="service_btn_height">30dip</dimen>
+    <dimen name="check_text_padding">15dip</dimen>
+    <dimen name="wlt_progress_info_text_size">12dip</dimen>
+    <dimen name="padding_size_dp">10dp</dimen>
+    <dimen name="padding_size_20px">22px</dimen>
+    <dimen name="foot_drawable_padding_dp">5dp</dimen>
+
+
+    <dimen name="address_text_length">128px</dimen>
+    <dimen name="login_top_length">80px</dimen>
+
+    <dimen name="tab_height">48dp</dimen>
+
+</resources>

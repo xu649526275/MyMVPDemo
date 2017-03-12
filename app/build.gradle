@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+//apply plugin: 'com.neenbedankt.android-apt'
+android {
+    compileSdkVersion 24
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        applicationId "com.android.mvp"
+        minSdkVersion 14
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.1.0'
+    compile 'com.android.support:design:24.2.0'
+    compile 'com.android.support:cardview-v7:24.2.1'
+    compile 'com.android.support:recyclerview-v7:24.2.0'
+    //RxJava
+    compile 'io.reactivex:rxandroid:1.2.0'
+    compile 'io.reactivex:rxjava:1.1.5'
+    compile 'com.jakewharton.rxbinding:rxbinding:0.4.0'
+    compile 'com.squareup.retrofit2:retrofit:2.0.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    //    compile 'com.squareup.retrofit2:converter-jackson:2.0.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+    compile 'com.squareup.okhttp3:okhttp:3.0.1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.0.1'
+    compile 'com.squareup.okio:okio:1.6.0'
+    compile 'com.google.code.gson:gson:2.4'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'de.greenrobot:eventbus:3.0.0-beta1'
+    // 适配
+    compile 'com.zhy:autolayout:1.4.3'
+    //状态栏
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    //鸿翔的okhttputils   :https://github.com/hongyangAndroid/okhttputils
+    compile 'com.zhy:okhttputils:2.6.2'
+    //内存泄漏
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+    //友盟
+    compile 'com.umeng.analytics:analytics:latest.integration'
+
+
+    //widget
+    compile 'com.miguelcatalan:materialsearchview:1.4.0'
+    //搜索插件
+    compile 'com.prolificinteractive:material-calendarview:1.4.0'
+    //日历
+    compile 'uk.co.chrisjenx:calligraphy:2.2.0'
+    //字体设置
+
+
+    compile 'net.opacapp:multiline-collapsingtoolbar:1.2.2'//toolbar
+
+
+    compile files('libs/tbs_sdk_thirdapp_v2.2.0.1096_36549_sharewithdownload_withoutGame_obfs_20160830_211645.jar')
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile project(':Photo_View')
+    compile project(':Lib_Myrecyclerview')
+    compile files('libs/tbs_sdk_thirdapp_v2.4.0.1073_36840_sharewithdownload_obfs_20161011_194834.jar')
+}

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+
+    <include layout="@layout/view_home_banner"
+        />
+
+    <!-- 分类 -->
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:background="@color/white"
+                  android:layout_marginTop="@dimen/padding_size10"
+        >
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:orientation="horizontal"
+                      android:gravity="center"
+                      android:padding="@dimen/padding_size10"
+                      android:id="@+id/button"
+            >
+
+            <ImageView android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:src="@mipmap/classify_title_left"
+                />
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/home_classify"
+                      android:layout_marginLeft="@dimen/padding_size15"
+                      android:layout_marginRight="@dimen/padding_size15"
+                      android:textColor="@color/black_text_color"
+                      android:textSize="@dimen/foot_text_size"/>
+
+            <ImageView android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:src="@mipmap/classify_title_right"
+                />
+
+        </LinearLayout>
+        <View android:layout_width="match_parent"
+              android:layout_height="1px"
+              android:background="@color/content_color"
+            />
+        <android.support.v7.widget.RecyclerView android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:id="@+id/home_barand_recycler"
+
+            />
+
+    </LinearLayout>
+
+
+
+
+    <!--  社区热帖  -->
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:background="@color/white"
+                  android:layout_marginTop="@dimen/padding_size10"
+        >
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:orientation="horizontal"
+                      android:gravity="center"
+                      android:padding="@dimen/padding_size10"
+            >
+
+            <ImageView android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:src="@mipmap/classify_title_left"
+                />
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/home_posts"
+                      android:layout_marginLeft="@dimen/padding_size15"
+                      android:layout_marginRight="@dimen/padding_size15"
+                      android:textColor="@color/black_text_color"
+                      android:textSize="@dimen/foot_text_size"/>
+
+            <ImageView android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:src="@mipmap/classify_title_right"
+                />
+
+        </LinearLayout>
+        <View android:layout_width="match_parent"
+              android:layout_height="1px"
+              android:background="@color/content_color"
+            />
+        <android.support.v7.widget.RecyclerView android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:id="@+id/home_borad_recycler"
+
+            />
+
+    </LinearLayout>
+
+
+
+    <!-- 精选专题 -->
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:layout_marginTop="@dimen/padding_size5"
+        >
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:orientation="horizontal"
+                      android:gravity="center"
+                      android:padding="@dimen/padding_size10"
+            >
+
+            <ImageView android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:src="@mipmap/classify_title_left"
+                />
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/home_topics"
+                      android:layout_marginLeft="@dimen/padding_size15"
+                      android:layout_marginRight="@dimen/padding_size15"
+                      android:textColor="@color/black_text_color"
+                      android:textSize="@dimen/foot_text_size"/>
+
+            <ImageView android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:src="@mipmap/classify_title_right"
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
