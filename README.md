@@ -16,8 +16,7 @@
 	：一个实现异步操作的库，现在非常火
 - [RxAndroid](https://github.com/ReactiveX/RxAndroid)
 	：用于Android的Rxjava绑定库
-- [RxBinding](https://github.com/JakeWharton/RxBinding)
-	：配合Rxjava处理控件异步调用
+
 - [EventBus](https://github.com/greenrobot/EventBus)
 	：订阅事件总线	
 - [retrofit](https://github.com/square/retrofit)
