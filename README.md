@@ -19,6 +19,8 @@
 	：用于Android的Rxjava绑定库
 - [RxBinding](https://github.com/JakeWharton/RxBinding)
 	：配合Rxjava处理控件异步调用
+- [EventBus](https://github.com/greenrobot/EventBus)
+	：订阅事件总线	
  - [retrofit](https://github.com/square/retrofit)
 	：目前最好用的网络通讯库，应该都用过吧
 - [okhttp](https://github.com/square/okhttp)
@@ -32,6 +34,7 @@
 	：帮助Json和Object转换，这个也常用
   - [android-Ultra-Pull-To-Refresh](https://github.com/liaohuqiu/android-Ultra-Pull-To-Refresh)
   :非常强大的下拉刷新
+  
   
   
   以及，友盟和鸿洋的auto自适应布局和腾讯x5内核web浏览器等等。
