@@ -11,8 +11,7 @@
 	：检测应用内存泄漏问题，这个都知道吧
 - [butterknife](https://github.com/JakeWharton/butterknife)
 	：帮助Android控件和回调的进行依赖注入，JakeWharton大神的力作
-- [dagger2](https://github.com/google/dagger)
-	：Android和Java依赖注入库
+
 - [rxjava](https://github.com/ReactiveX/RxJava)
 	：一个实现异步操作的库，现在非常火
 - [RxAndroid](https://github.com/ReactiveX/RxAndroid)
