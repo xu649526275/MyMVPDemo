@@ -2,12 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:title="@string/drawer_group_content">
         <menu>
-            <item
-                android:id="@+id/drawer_dp"
-                android:icon="@mipmap/ic_drawer_setting"
-                android:checkable="true"
-                android:checked="true"
-                android:title="@string/dp"/>
+            <!--<item-->
+                <!--android:id="@+id/drawer_dp"-->
+                <!--android:icon="@mipmap/ic_drawer_setting"-->
+                <!--android:checkable="true"-->
+                <!--android:checked="true"-->
+                <!--android:title="@string/dp"/>-->
             <!--<item-->
                 <!--android:id="@+id/drawer_zhihu"-->
                 <!--android:icon="@mipmap/ic_drawer_zhihu"-->

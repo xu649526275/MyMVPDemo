@@ -67,14 +67,14 @@ public class MainActivity extends BaseActivity {
     protected void initView() {
         mFragmentManager = getSupportFragmentManager();
         mFragmentFactory = new FragmentFactory(mFragmentManager, this);
-        switchContent(R.id.drawer_dp);
-        mLastMenuItem = mNavigationView.getMenu().findItem(R.id.drawer_dp);
+        switchContent(R.id.drawer_wechat);
+        mLastMenuItem = mNavigationView.getMenu().findItem(R.id.drawer_wechat);
         mNavigationView.setNavigationItemSelectedListener(item -> {
             switch (item.getItemId()) {
-                case R.id.drawer_dp:
-                    switchContent(R.id.drawer_dp);
-                    mBuilder.setTitle("首页");
-                    break;
+//                case R.id.drawer_dp:
+//                    switchContent(R.id.drawer_dp);
+//                    mBuilder.setTitle("首页");
+//                    break;
 //                case R.id.drawer_zhihu:
 //                    switchContent(R.id.drawer_zhihu);
 //                    break;

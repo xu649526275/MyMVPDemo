@@ -46,8 +46,7 @@ public class NewByIdPresenter extends BasePresenter<NewsContract.NewsView > impl
                 }
                 return Observable.from(map.get(id));
             }
-        })
-                .map(new Func1<WYNewsBean, WYNewsBean>() {
+        }) .map(new Func1<WYNewsBean, WYNewsBean>() {
                     @Override
                     public WYNewsBean call(WYNewsBean wyNewsBean) {
                         String ptime = DateUtil.formatDate(wyNewsBean.getPtime());

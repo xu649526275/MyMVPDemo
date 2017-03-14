@@ -28,9 +28,9 @@ public class FragmentFactory extends FragmentPagerAdapter {
     public Fragment getItem(int res) {
         Fragment fragment = null;
         switch (res) {
-            case R.id.drawer_dp:
-                fragment=new FragmentSAYDHome();
-                break;
+//            case R.id.drawer_dp:
+//                fragment=new FragmentSAYDHome();
+//                break;
 //            case R.id.drawer_zhihu:
 //                fragment=new FragmentZhihu();
 //                break;
