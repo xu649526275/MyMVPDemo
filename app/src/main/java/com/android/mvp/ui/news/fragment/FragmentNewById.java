@@ -39,10 +39,7 @@ public class FragmentNewById extends BaseFragmentLazy<NewByIdPresenter, List<WYN
 
 
 
-    @Override
-    protected void initData() {
 
-    }
 
     /**
      * 初始化view
@@ -54,19 +51,18 @@ public class FragmentNewById extends BaseFragmentLazy<NewByIdPresenter, List<WYN
         type = bundle.getString("type");
         id = bundle.getString("id");
         initView();
-        isPrepared=true;
-        lazyLoad();
     }
 
-    /**
-     *初始化recyclerview
-     * */
-    private void initView() {
+    @Override
+    public void initView() {
         adapter = new NewsAdapter(getActivity(), newLists);
         LinearLayoutManager lm=new LinearLayoutManager(getActivity());
         mMyRecycler.setAdapter(adapter);
         mMyRecycler.setLayoutManager(lm);
+        isPrepared=true;
+        lazyLoad();
     }
+
 
     @Override
     protected void initToolbar() {
@@ -83,19 +79,22 @@ public class FragmentNewById extends BaseFragmentLazy<NewByIdPresenter, List<WYN
         if(!isPrepared||!isVisible||mHasLoadedOnce){
             return;
         }
-        initDatas();
+        initData();
     }
+
 
     /**
      * 初始化数据
      * */
-    private void initDatas() {
+    @Override
+    protected void initData() {
         showProgress();
         index = 0;
         newLists.clear();
         mPresenter.getNewById(type, id, index);
-
     }
+
+
 
     @Override
     public NewByIdPresenter getPresenter() {

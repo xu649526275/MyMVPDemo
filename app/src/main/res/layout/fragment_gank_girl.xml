@@ -2,7 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+                android:background="@color/content_color"
+    >
 
     <com.android.dalong.MyRefLayout
         android:id="@+id/load_more_list_view_ptr_frame"
@@ -13,7 +15,9 @@
         <com.android.dalong.MyRecyclerView
             android:id="@+id/gial_recycler"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+
+            />
 
     </com.android.dalong.MyRefLayout>
 </LinearLayout>

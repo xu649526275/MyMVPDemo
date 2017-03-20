@@ -2,6 +2,7 @@ package com.android.mvp.ui.gank.fragment;
 
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 
 import com.android.dalong.MyRecyclerView;
@@ -63,17 +64,9 @@ public class FragmentGankGirl extends BaseFragmentLazy<GankPresenter,List<GankIt
         return R.layout.fragment_gank_girl;
     }
 
-    @Override
-    protected void lazyLoad() {
-        if(!isPrepared||!isVisible||mHasLoadedOnce){
-            return;
-        }
-        initData();
-    }
 
-    private void initView() {
-
-
+    public void initView() {
+        super.initView();
         loadMoreListViewPtrFrame.initDefRefresh();
         loadMoreListViewPtrFrame.setRefresh(new MyRefLayout.PtrRefresh() {
             @Override
@@ -84,7 +77,8 @@ public class FragmentGankGirl extends BaseFragmentLazy<GankPresenter,List<GankIt
         });
         mAdapter=new GankGirlAdapter(getActivity(),mGankItemBens);
         mGialRecycler.setAdapter(mAdapter);
-        mGialRecycler.setLayoutManager(new GridLayoutManager(getActivity(),2));
+//        mGialRecycler.setLayoutManager(new GridLayoutManager(getActivity(),2));
+        mGialRecycler.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
         mGialRecycler.setLoadView(getActivity(), pageSize, new LoadView.OnLoadRecyclerListener() {
             @Override
             public void LoadPage(View view) {

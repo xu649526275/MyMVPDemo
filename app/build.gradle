@@ -61,11 +61,11 @@ dependencies {
 
 
     //widget
-    compile 'com.miguelcatalan:materialsearchview:1.4.0'
+//    compile 'com.miguelcatalan:materialsearchview:1.4.0'
     //搜索插件
-    compile 'com.prolificinteractive:material-calendarview:1.4.0'
+//    compile 'com.prolificinteractive:material-calendarview:1.4.0'
     //日历
-    compile 'uk.co.chrisjenx:calligraphy:2.2.0'
+//    compile 'uk.co.chrisjenx:calligraphy:2.2.0'
     //字体设置
 
 
@@ -73,7 +73,7 @@ dependencies {
 
 
     compile files('libs/tbs_sdk_thirdapp_v2.2.0.1096_36549_sharewithdownload_withoutGame_obfs_20160830_211645.jar')
-    compile 'com.squareup.picasso:picasso:2.5.2'
+//    compile 'com.squareup.picasso:picasso:2.5.2'
     compile project(':Photo_View')
     compile project(':Lib_Myrecyclerview')
     compile files('libs/tbs_sdk_thirdapp_v2.4.0.1073_36840_sharewithdownload_obfs_20161011_194834.jar')

@@ -12,12 +12,14 @@ import android.widget.ImageView;
 import com.android.mvp.R;
 import com.android.mvp.base.BaseFragment;
 import com.android.mvp.bean.NewTabs;
+import com.android.mvp.event.DaLongEvent;
 import com.android.mvp.event.TabEvent;
 import com.android.mvp.presenter.NewPresenter;
 import com.android.mvp.presenter.contract.NewsContract;
 import com.android.mvp.ui.MyPagerAdapter;
 import com.android.mvp.ui.news.activity.NewsTabActivity;
 import com.android.mvp.util.MLog;
+import com.android.mvp.util.RxBus;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +27,7 @@ import java.util.List;
 import butterknife.Bind;
 import de.greenrobot.event.EventBus;
 import de.greenrobot.event.Subscribe;
+import rx.functions.Action1;
 
 /**
  *网易新闻总界面
@@ -101,12 +104,17 @@ public class FragmentNew extends BaseFragment<NewPresenter, List<NewTabs>> imple
             }
         });
 
+        mPresenter.addSubscription(RxBus.getDefault().toObservable(DaLongEvent.class).subscribe(new Action1<DaLongEvent>() {
+            @Override
+            public void call(DaLongEvent daLongEvent) {
+                MLog.v("DaLongRxBus",daLongEvent.getName());
+            }
+        }));
+
     }
 
     @Override
     protected void initData() {
-
-
     }
 
 

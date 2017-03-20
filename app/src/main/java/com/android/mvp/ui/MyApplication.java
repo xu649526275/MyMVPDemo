@@ -18,7 +18,6 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
-import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 /**
  * created by 大龙, 16/04/09
@@ -50,7 +49,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 
 public class   MyApplication extends Application {
-    private static MyApplication sAppContext;
+    private static Context sAppContext;
     private static MyApplication instance;
     private List<Activity> activityList = new LinkedList<Activity>();
     private static final String TAG = "MyApplication";
@@ -71,13 +70,17 @@ public class   MyApplication extends Application {
         return application.refWatcher;
     }
 
+    public MyApplication(){
+        sAppContext=getAppContext();
+    }
+
 
     @Override
     public void onCreate() {
         super.onCreate();
 
         MLog.init(true);
-        initCallgraphy();
+//        initCallgraphy();
         sAppContext=this;
         initLeakCanary();
 
@@ -119,24 +122,24 @@ public class   MyApplication extends Application {
 
 
 
-    public static MyApplication getAppContext() {
+    public static Context getAppContext() {
         return sAppContext;
     }
 
     /**
      * 全局变量字体
      * */
-    private void initCallgraphy() {
-
-
-        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                .setDefaultFontPath("fonts/ac.ttf")
-                .setFontAttrId(R.attr.fontPath)
-//                .addCustomViewWithSetTypeface(CustomViewWithTypefaceSupport.class)
-//                .addCustomStyle(TextField.class, R.attr.textFieldStyle)
-                .build()
-        );
-    }
+//    private void initCallgraphy() {
+//
+//
+//        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+//                .setDefaultFontPath("fonts/ac.ttf")
+//                .setFontAttrId(R.attr.fontPath)
+////                .addCustomViewWithSetTypeface(CustomViewWithTypefaceSupport.class)
+////                .addCustomStyle(TextField.class, R.attr.textFieldStyle)
+//                .build()
+//        );
+//    }
 
     private void initOkhttp() {
         OkHttpClient okHttpClient = new OkHttpClient.Builder()

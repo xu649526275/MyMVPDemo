@@ -14,7 +14,6 @@
         android:gravity="center"
         >
         <com.android.mvp.widget.view.ProgressWheel
-            android:id="@+id/progress_wheel"
             android:layout_width="80px"
             android:layout_height="80px"
             android:layout_centerHorizontal="true"

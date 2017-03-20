@@ -170,7 +170,6 @@ public class NewsDetialActivity extends BaseActivity<NewDetialPresenter, WYDetia
         });
         newsDetailBodyTv.loadDataWithBaseURL(null,content,"text/html","utf-8",null);
        // newsDetailBodyTv.setText(Html.fromHtml(content));
-
-
     }
+
 }

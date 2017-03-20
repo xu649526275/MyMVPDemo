@@ -4,8 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:fitsSystemWindows="true"
-     android:clipToPadding="true"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
 
@@ -17,21 +15,21 @@
 
     <LinearLayout
         android:orientation="vertical"
-        android:fitsSystemWindows="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_margin_top"
+            android:background="?attr/colorPrimary"/>
+        <!-- 遮挡状态栏透明的部分 -->
         <FrameLayout
             android:id="@+id/toolbar_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         <include layout="@layout/toolbar"
                  android:id="@+id/mytoolbar"
-
             />
-        <com.miguelcatalan.materialsearchview.MaterialSearchView
-            android:id="@+id/view_search"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+
         </FrameLayout>
 
         <FrameLayout android:layout_width="match_parent"

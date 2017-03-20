@@ -70,7 +70,7 @@ public abstract class BaseActivity<T extends BasePresenterI, V> extends AutoLayo
         initView();
         initToolbar();
         initData();
-        application= (MyApplication) context.getApplicationContext();
+        application= MyApplication.getInstance();
         application.addActivity(this);
 
 

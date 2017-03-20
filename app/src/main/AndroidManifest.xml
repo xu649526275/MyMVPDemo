@@ -15,7 +15,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppBaseTheme">
         <activity android:name=".ui.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,7 +28,7 @@
 
         </activity>
         <activity android:name=".ui.gank.activity.GankGirlDetialActivity"
-
+            android:theme="@style/SplashTheme"
             />
 
         <activity android:name=".ui.news.activity.NewsTabActivity"

@@ -69,6 +69,11 @@ public abstract class BaseFragmentLazy<T extends BasePresenterI,V> extends Fragm
     protected abstract void initToolbar();
     protected abstract void initData();
 
+    public void initView(){
+        isPrepared=true;
+        lazyLoad();
+    }
+
     public T getPresenter() {
         return null;
     }
@@ -108,7 +113,18 @@ public abstract class BaseFragmentLazy<T extends BasePresenterI,V> extends Fragm
      * 延迟加载
      * 子类必须重写此方法
      */
-    protected abstract void lazyLoad();
+//    protected abstract void lazyLoad();
+
+    /**
+     * 延迟加载
+     * 子类必须重写此方法
+     */
+    protected void lazyLoad() {
+        if(!isPrepared||!isVisible||mHasLoadedOnce){
+            return;
+        }
+        initData();
+    }
 
 
     @Override

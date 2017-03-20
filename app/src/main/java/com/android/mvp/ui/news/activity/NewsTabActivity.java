@@ -10,12 +10,14 @@ import com.android.mvp.R;
 import com.android.mvp.base.BaseActivity;
 import com.android.mvp.bean.NewTabs;
 import com.android.mvp.db.DbUtils;
+import com.android.mvp.event.DaLongEvent;
 import com.android.mvp.event.TabEvent;
 import com.android.mvp.presenter.NewTabPresenter;
 import com.android.mvp.presenter.contract.NewsContract;
 import com.android.mvp.ui.news.adapter.TabsAdapter;
 import com.android.mvp.util.MLog;
 import com.android.mvp.util.MyItemTouchHelper;
+import com.android.mvp.util.RxBus;
 import com.android.mvp.util.RxUtil;
 import com.android.mvp.widget.view.MyToolbar;
 
@@ -25,6 +27,7 @@ import java.util.List;
 
 import butterknife.Bind;
 import de.greenrobot.event.EventBus;
+import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
@@ -51,6 +54,15 @@ public class NewsTabActivity extends BaseActivity<NewTabPresenter, List<NewTabs>
     private List<NewTabs> moreTabs=new ArrayList<NewTabs>();//更多
     private TabsAdapter myAdapter;
     private TabsAdapter moreAdapter;
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        myTabs=null;
+        moreTabs=null;
+
+    }
 
     @Override
     public int getLayoutId() {
@@ -89,6 +101,8 @@ public class NewsTabActivity extends BaseActivity<NewTabPresenter, List<NewTabs>
 
         ItemTouchHelper helper=new ItemTouchHelper(new MyItemTouchHelper(this));//添加我的tab长按拖动和单击删除
         helper.attachToRecyclerView(myTabsRecycler);
+
+       RxBus.getDefault().post(new DaLongEvent("哈哈哈哈"));
 
     }
 

@@ -30,6 +30,17 @@ public class GankItemBean {
     private String who;
     private int height;
 
+    // 保存图片宽高
+    private String pixel;
+
+    public String getPixel() {
+        return pixel;
+    }
+
+    public void setPixel(String pixel) {
+        this.pixel = pixel;
+    }
+
     public int getHeight() {
         return height;
     }

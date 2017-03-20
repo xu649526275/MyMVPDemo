@@ -55,9 +55,8 @@ public class FragmentGankAndroid extends BaseFragmentLazy<GankPresenter, List<Ga
         mPresenter.attachView(this, getActivity());
         Bundle bundle=this.getArguments();
         tech=bundle.getString("tech");
-        isPrepared=true;
         initView();
-        lazyLoad();
+
     }
 
     @Override
@@ -70,24 +69,16 @@ public class FragmentGankAndroid extends BaseFragmentLazy<GankPresenter, List<Ga
         return R.layout.fragment_gank_android;
     }
 
-    /**
-     * 数据懒加载
-     * */
-    @Override
-    protected void lazyLoad() {
-        if(!isPrepared||!isVisible||mHasLoadedOnce){
-            return;
-        }
 
-        initData();
-    }
+
 
 
 
     /**
      * 初始化view
      * */
-    private void initView() {
+    public void initView() {
+        super.initView();
         loadMoreListViewPtrFrame.initDefRefresh();
         loadMoreListViewPtrFrame.setRefresh(new MyRefLayout.PtrRefresh() {
             @Override

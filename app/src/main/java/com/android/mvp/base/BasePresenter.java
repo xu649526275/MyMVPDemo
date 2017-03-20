@@ -40,7 +40,7 @@ public class BasePresenter<V extends BaseViewI> implements BasePresenterI {
     /**
      * 事件订阅
      * */
-    protected void addSubscription(Subscription s) {
+    public void addSubscription(Subscription s) {
         if (this.mCompositeSubscription == null) {
             this.mCompositeSubscription = new CompositeSubscription();
         }
@@ -55,6 +55,7 @@ public class BasePresenter<V extends BaseViewI> implements BasePresenterI {
         }
         mView=null;
         context=null;
+        this.mCompositeSubscription=null;
     }
 
 

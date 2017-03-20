@@ -4,21 +4,22 @@ import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.view.Menu;
+
 import android.view.MenuItem;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.android.mvp.R;
 import com.android.mvp.base.BaseActivity;
-import com.android.mvp.event.WxSearchEvent;
+
 import com.android.mvp.widget.view.MyToolbar;
-import com.miguelcatalan.materialsearchview.MaterialSearchView;
+
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import de.greenrobot.event.EventBus;
 
 
 public class MainActivity extends BaseActivity {
@@ -34,14 +35,13 @@ public class MainActivity extends BaseActivity {
     ActionBarDrawerToggle mDrawerToggle;
     @Bind(R.id.navigation)
     NavigationView mNavigationView;
-    @Bind(R.id.view_search)
-    MaterialSearchView mSearchView;
+
     private FragmentManager mFragmentManager;
     private MenuItem mLastMenuItem;
     private FragmentFactory mFragmentFactory;
 
     private MyToolbar.Builder mBuilder;
-    private MenuItem mSearchMenuItem;
+
 
 
 
@@ -49,9 +49,10 @@ public class MainActivity extends BaseActivity {
     @Override
     public int getLayoutId() {
         return R.layout.activity_main;
-
-
     }
+
+
+
 
     @Override
     protected void initToolbar() {
@@ -59,17 +60,18 @@ public class MainActivity extends BaseActivity {
         mDrawerToggle = new ActionBarDrawerToggle(this, mMyDrawer, mMyToolbar, R.string.drawer_open, R.string.drawer_close);
         mDrawerToggle.syncState();
         mMyDrawer.addDrawerListener(mDrawerToggle);
-
-
     }
 
     @Override
     protected void initView() {
+//        this.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         mFragmentManager = getSupportFragmentManager();
         mFragmentFactory = new FragmentFactory(mFragmentManager, this);
         switchContent(R.id.drawer_wechat);
         mLastMenuItem = mNavigationView.getMenu().findItem(R.id.drawer_wechat);
         mNavigationView.setNavigationItemSelectedListener(item -> {
+//            mMyDrawer.closeDrawer();
+            mMyDrawer.closeDrawer(GravityCompat.START);
             switch (item.getItemId()) {
 //                case R.id.drawer_dp:
 //                    switchContent(R.id.drawer_dp);
@@ -108,18 +110,7 @@ public class MainActivity extends BaseActivity {
             return true;
         });
 
-        mSearchView.setOnQueryTextListener(new MaterialSearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                EventBus.getDefault().post(new WxSearchEvent(query));
-                return false;
-            }
 
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                return false;
-            }
-        });
     }
 
 
@@ -130,15 +121,6 @@ public class MainActivity extends BaseActivity {
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu,menu);
-        MenuItem item=menu.findItem(R.id.action_search);
-        item.setVisible(false);
-        mSearchView.setMenuItem(item);
-        mSearchMenuItem = item;
-        return true;
-    }
 
     @Override
     protected void onDestroy() {
@@ -164,5 +146,31 @@ public class MainActivity extends BaseActivity {
         mFragmentFactory.setPrimaryItem(myFragment, 0, fragment);
         mFragmentFactory.finishUpdate(myFragment);
         return fragment;
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        if(mMyDrawer.isDrawerOpen(GravityCompat.START)){
+            mMyDrawer.closeDrawer(GravityCompat.START);
+        }else{
+            _exit();
+        }
+
+    }
+
+    long mExitTime=0;
+
+    /**
+     * 退出
+     */
+    private void _exit() {
+
+        if (System.currentTimeMillis() - mExitTime > 2000) {
+            Toast.makeText(this, "再按一次退出程序", Toast.LENGTH_SHORT).show();
+            mExitTime = System.currentTimeMillis();
+        } else {
+            finish();
+        }
     }
 }
